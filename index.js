@@ -3,7 +3,7 @@
 const express = require('express');
 const request = require('request');
 const bodyParser = require('body-parser');
-
+const dialogFlow = require('dialogflow');
 
 const app = express();
 
@@ -17,10 +17,9 @@ var port = process.env.PORT || 8080;
 // create serve and configure it.
 
 
-app.get('/webhook', function (req, res) {
+app.post('/webhook', function (req, res) {
 
-    let dialogflowData = req.body.results;
-    console.log(dialogflowData);
+    console.log(req.body);
 
 });
 
