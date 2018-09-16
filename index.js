@@ -16,12 +16,16 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 8080;
 // create serve and configure it.
 
+app.get('/', (req, res) => {
+    res.send("Hello App is working Fine");
+});
 
 app.post('/webhook', function (req, res) {
 
     console.log("Webhook is called");
 
 });
+
 
 app.listen(port, function () {
     console.log("Server is up and running...");
