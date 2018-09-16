@@ -22,7 +22,7 @@ var port = process.env.PORT || 8080;
 // create serve and configure it.
 const app = express();
 
-app.post('/webhook', function (req, res) {
+app.get('/webhook', function (req, res) {
     res.send('Hello NDH Chatbot');
 
 });
