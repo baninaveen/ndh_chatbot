@@ -19,7 +19,7 @@ var port = process.env.PORT || 8080;
 
 app.post('/webhook', function (req, res) {
 
-    console.log(req.body);
+    console.log("Webhook is called");
 
 });
 
