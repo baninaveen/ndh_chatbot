@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 app.post('/webhook', function (req, res) {
 
     console.log("Webhook is called");
+    console.log(req.body.queryResult);
 
 });
 
