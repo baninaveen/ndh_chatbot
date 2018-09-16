@@ -7,6 +7,9 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.json());
 
 
@@ -15,7 +18,9 @@ var port = process.env.PORT || 8080;
 
 
 app.get('/webhook', function (req, res) {
-    res.send('Hello NDH Chatbot Bani Naveen');
+
+    let dialogflowData = res.body.results;
+    res.send(dialogflowData);
 
 });
 
