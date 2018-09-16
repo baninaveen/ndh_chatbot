@@ -19,8 +19,8 @@ var port = process.env.PORT || 8080;
 
 app.get('/webhook', function (req, res) {
 
-    let dialogflowData = res.body.results;
-    res.send(dialogflowData);
+    let dialogflowData = req.body.results;
+    console.log(dialogflowData);
 
 });
 
